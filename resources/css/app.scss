@@ -1,0 +1,138 @@
+$primary-color: #091329;
+$primary-light-color:#37C4E9;
+$secondary-color:white;
+$background-color:#202020;
+
+
+$sideBarWidth:7rem;
+$normalFontSize:1.2rem;
+header {
+    background: black;
+    height: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        .part{
+            // display: flex;
+            // justify-content: center;
+            // flex-direction: column;
+            align-self: center;
+            a{
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+.body {
+    display: flex;
+    color: white;
+    
+    .side-bar{
+        width: $sideBarWidth;
+        background: black;
+        position: fixed;
+        height: 100vh;
+        .side-bar-item{
+            width: $sideBarWidth;
+            height: $sideBarWidth;
+            margin-bottom: .1rem;
+            background: $primary-color;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+
+            svg{
+                path{
+                    stroke:'white';
+                }
+            }
+            &.active{
+                svg{
+                    path{
+                        stroke:$primary-light-color;
+                    }
+                }
+            }
+        }
+    }
+    .content{
+        background-color: $background-color;
+        width: 100%;
+
+        .chartContent{
+            width: 100%;
+            margin-left: $sideBarWidth;
+            .chartPanel{
+                background-color: $background-color;
+                display: flex;
+                .chartSymbolPanel{
+                    width: 20rem;
+                    height: calc(100vh - 6rem);
+                    border-left: 1px solid white;
+                    border-right: 1px solid white;
+                    overflow-y: auto;
+                    
+                    .chartSymbolItem{
+                        border-bottom: 1px solid white;
+                        font-size: $normalFontSize;
+                        cursor: pointer;
+                        display: flex;
+                        text-align: center;
+                        .chartSymbolItemName{
+                            width: 12rem;
+                            padding-top: 0.7rem;
+                            padding-bottom: 0.7rem;
+                        }
+                        .chartSymbolItemAct{
+                            width: 4rem;
+    
+                            border-left: 1px solid white;
+                            border-right: 1px solid white;
+                            padding-top: 0.5rem;
+                        }
+                        .chartSymbolItemGraph{
+                            width: 4rem;
+                            padding-top: 0.5rem;
+    
+                        }
+                    }
+                }
+                .chartGraphPanel{
+                    width: calc(100% - 27rem);
+                }
+            }
+        }
+        .initialContent{
+            width: 100%;
+            min-height: calc(100vh - 6rem);
+            display: flex;
+            .postCategory{
+                width: $sideBarWidth;
+                font-size: $normalFontSize;
+                .item{
+                    border: 0.5px solid;
+                    text-align: center;
+                    padding-top: 0.7rem;
+                    padding-bottom: 0.7rem;
+                    cursor: pointer;
+                    &.active{
+                        color: $primary-light-color;
+                    }
+                }
+            }
+            .postContent{
+                padding-top: 1rem;
+                width: 100%;
+                .title{
+                    text-align: center;
+                }
+            }
+        }
+    }
+    
+    
+}

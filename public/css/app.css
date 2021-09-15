@@ -1,0 +1,114 @@
+header {
+  background: black;
+  height: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+header nav .part {
+  align-self: center;
+}
+header nav .part a {
+  margin-right: 1rem;
+}
+
+.body {
+  display: flex;
+  color: white;
+}
+.body .side-bar {
+  width: 7rem;
+  background: black;
+  position: fixed;
+  height: 100vh;
+}
+.body .side-bar .side-bar-item {
+  width: 7rem;
+  height: 7rem;
+  margin-bottom: 0.1rem;
+  background: #091329;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.body .side-bar .side-bar-item svg path {
+  stroke: "white";
+}
+.body .side-bar .side-bar-item.active svg path {
+  stroke: #37C4E9;
+}
+.body .content {
+  background-color: #202020;
+  width: 100%;
+}
+.body .content .chartContent {
+  width: 100%;
+  margin-left: 7rem;
+}
+.body .content .chartContent .chartPanel {
+  background-color: #202020;
+  display: flex;
+}
+.body .content .chartContent .chartPanel .chartSymbolPanel {
+  width: 20rem;
+  height: calc(100vh - 6rem);
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  overflow-y: auto;
+}
+.body .content .chartContent .chartPanel .chartSymbolPanel .chartSymbolItem {
+  border-bottom: 1px solid white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+}
+.body .content .chartContent .chartPanel .chartSymbolPanel .chartSymbolItem .chartSymbolItemName {
+  width: 12rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+.body .content .chartContent .chartPanel .chartSymbolPanel .chartSymbolItem .chartSymbolItemAct {
+  width: 4rem;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  padding-top: 0.5rem;
+}
+.body .content .chartContent .chartPanel .chartSymbolPanel .chartSymbolItem .chartSymbolItemGraph {
+  width: 4rem;
+  padding-top: 0.5rem;
+}
+.body .content .chartContent .chartPanel .chartGraphPanel {
+  width: calc(100% - 27rem);
+}
+.body .content .initialContent {
+  width: 100%;
+  min-height: calc(100vh - 6rem);
+  display: flex;
+}
+.body .content .initialContent .postCategory {
+  width: 7rem;
+  font-size: 1.2rem;
+}
+.body .content .initialContent .postCategory .item {
+  border: 0.5px solid;
+  text-align: center;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  cursor: pointer;
+}
+.body .content .initialContent .postCategory .item.active {
+  color: #37C4E9;
+}
+.body .content .initialContent .postContent {
+  padding-top: 1rem;
+  width: 100%;
+}
+.body .content .initialContent .postContent .title {
+  text-align: center;
+}
