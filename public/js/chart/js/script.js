@@ -260,15 +260,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
             */
             
             overrides: {
-                "theme" : "#FF0000",
-                "volumePaneSize": "medium", 
-                "symbolWatermarkProperties.color": "#00FF00", 
-                "symbolWatermarkProperties.transparency": 100, 
-                "paneProperties.topMargin": 10, 
-                "paneProperties.background": "#00FF00", 
-                "paneProperties.vertGridProperties.color": "#FF0000", 
-                "paneProperties.horzGridProperties.color": "#F2F2F2", 
-                "scalesProperties.showStudyLastValue": true
+                // "theme" : "#FF0000",
+                // "volumePaneSize": "medium", 
+                // "symbolWatermarkProperties.color": "#00FF00", 
+                // "symbolWatermarkProperties.transparency": 100, 
+                // "paneProperties.topMargin": 10, 
+                // "paneProperties.background": "#00FF00", 
+                // "paneProperties.vertGridProperties.color": "#FF0000", 
+                // "paneProperties.horzGridProperties.color": "#F2F2F2", 
+                // "scalesProperties.showStudyLastValue": true
+                "symbolWatermarkProperties.color": "rgba(0, 0, 0, 0)",
+                "paneProperties.vertGridProperties.color": "rgba(0, 0, 0, 0)",
+                "paneProperties.horzGridProperties.color": "rgba(0, 0, 0, 0)",
+                "paneProperties.legendProperties.showStudyTitles": false,
+                "paneProperties.legendProperties.showStudyValues": false,
+                "volumePaneSize": "small",
+                "mainSeriesProperties.showCountdown": true,
+                "mainSeriesProperties.candleStyle.upColor": "#4169e1",
+                "mainSeriesProperties.candleStyle.borderUpColor": "#4169e1",
             },
             
             
