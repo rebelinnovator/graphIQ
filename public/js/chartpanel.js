@@ -42,7 +42,7 @@ const resetChartSymbolPanel = (id) =>{
     chartSymbolList[cindex].list.forEach(symbol => {
         phtml += `
             <div class="chartSymbolItem">
-                <div class="chartSymbolItemName" id="FXCM:GBPCAD:M5">
+                <div class="chartSymbolItemName" id="FXCM:${symbol}:M5">
                     ${symbol}
                 </div>
                 <div class="chartSymbolItemAct">
@@ -57,11 +57,13 @@ const resetChartSymbolPanel = (id) =>{
     $('.chartSymbolPanel').html(phtml);
 }
 resetChartSymbolPanel('side-bar-spaceship');
-
-$(".chartSymbolPanel > .chartSymbolItem > .chartSymbolItemName").click(function(){
+$(document).on('click', '.chartSymbolPanel > .chartSymbolItem > .chartSymbolItemName', function() {
     console.log($(this).attr('id'));
     let symbolName = $(this).attr('id');
     widget.chart().setSymbol(symbolName);
+})
+$(".chartSymbolPanel > .chartSymbolItem > .chartSymbolItemName").click(function(){
+    
 })
 /*
 symbol: 'Bitfinex:ETHUSD',
