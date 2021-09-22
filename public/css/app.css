@@ -73,11 +73,17 @@ header nav .part a {
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
 }
+.body .content .chartContent .chartPanel .chartSymbolPanel .chartSymbolItem .chartSymbolItemName:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 .body .content .chartContent .chartPanel .chartSymbolPanel .chartSymbolItem .chartSymbolItemAct {
   width: 4rem;
   border-left: 1px solid white;
   border-right: 1px solid white;
   padding-top: 0.5rem;
+}
+.body .content .chartContent .chartPanel .chartSymbolPanel .chartSymbolItem .chartSymbolItemAct:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .body .content .chartContent .chartPanel .chartSymbolPanel .chartSymbolItem .chartSymbolItemGraph {
   width: 4rem;
@@ -112,3 +118,65 @@ header nav .part a {
 .body .content .initialContent .postContent .title {
   text-align: center;
 }
+
+/**
+*************Utils
+*/
+/*Header DropDown*/
+.dropdown {
+  float: left;
+}
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  /* Important for vertical align on mobile phones */
+  margin: 0;
+  /* Important for vertical align on mobile phones */
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+.dropdown .dropbtn:hover {
+  color: #9b9999;
+}
+.dropdown .dropdown-content {
+  top: 50px;
+  width: 150px;
+  left: -5rem;
+  display: none;
+  position: absolute;
+  background-color: #202020;
+  border: 1px solid white;
+  z-index: 1;
+}
+.dropdown .dropdown-content a {
+  float: none;
+  color: white;
+  padding: 15px 15px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown .dropdown-content a:hover {
+  color: #949494;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/**/
+/*Modal*/
+.custom-modal .modal-dialog .modal-content {
+  border: 1px solid white;
+  border-radius: 0px;
+  color: white;
+  background-color: #202020;
+}
+.custom-modal .modal-dialog .modal-content #modalchart {
+  height: 80vh;
+}
+
+/**/
+/**/

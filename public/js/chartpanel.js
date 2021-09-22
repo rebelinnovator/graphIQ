@@ -41,8 +41,8 @@ const resetChartSymbolPanel = (id) =>{
     console.log(cindex)
     chartSymbolList[cindex].list.forEach(symbol => {
         phtml += `
-            <div class="chartSymbolItem">
-                <div class="chartSymbolItemName" id="FXCM:${symbol}:M5">
+            <div class="chartSymbolItem" id="FXCM:${symbol}:M5">
+                <div class="chartSymbolItemName">
                     ${symbol}
                 </div>
                 <div class="chartSymbolItemAct">
@@ -58,38 +58,13 @@ const resetChartSymbolPanel = (id) =>{
 }
 resetChartSymbolPanel('side-bar-spaceship');
 $(document).on('click', '.chartSymbolPanel > .chartSymbolItem > .chartSymbolItemName', function() {
-    console.log($(this).attr('id'));
-    let symbolName = $(this).attr('id');
-    widget.chart().setSymbol(symbolName);
+    //let symbolName = $(this).attr('id');
+    widget.chart().setSymbol($(this).parent().attr('id'));
 })
-$(".chartSymbolPanel > .chartSymbolItem > .chartSymbolItemName").click(function(){
-    
+
+$(document).on('click', '.chartSymbolPanel > .chartSymbolItem > .chartSymbolItemAct', function() {
+    console.log($(this).parent().attr('id'));
+    $("#chartModalTitle").text($(this).parent().attr('id'))
+    modalwidget.chart().setSymbol($(this).parent().attr('id'));
+    $("#chartModal").modal('show')
 })
-/*
-symbol: 'Bitfinex:ETHUSD',
-interval: '5',
-theme: 'Dark',
-style: '1',
-container_id: "tv_chart_container",
-library_path: "/charting_library/",
-locale: lang,
-width: '100%',
-height: '618px',
-hide_top_toolbar: false,
-left_toolbar: true,
-hide_side_toolbar: false,
-allow_symbol_change: false,
-hideideas: false,
-debug: false,
-chartsStorageUrl: 'https://saveload.tradingview.com',
-chartsStorageApiVersion: '1.1',
-clientId: 'tradingview.com',
-userId: 'public_user_id',
-disabled_features: [
-    'use_localstorage_for_settings',
-],
-preset: 'mobile',
-'studies': [
-    'Volume@tv-basicstudies'
-]
-*/
